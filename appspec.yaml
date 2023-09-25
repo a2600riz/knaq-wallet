@@ -1,0 +1,9 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:146096602241:task-definition/knaq-wallet-dev"
+        LoadBalancerInfo:
+          ContainerName: "knaq-wallet-dev"
+          ContainerPort: 8080
